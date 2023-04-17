@@ -15,9 +15,9 @@
 product = int(input("Enter product number:> "))
 sum_numbers = int(input("Enter sum number:> "))
 
-for first_num in range(sum_numbers):
-    for second_num in range(product):
+for first_num in range(1, 1000):
+    for second_num in range(1, 1000):
         if sum_numbers == first_num  + second_num and product == first_num  * second_num:
-             print(f"First number -->{first_num}\nSecond number -->{second_num}")   
+           print(f"First number -->{first_num}\nSecond number -->{second_num}")   
    
 
