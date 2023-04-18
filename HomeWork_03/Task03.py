@@ -37,7 +37,7 @@ points_en = {1:'AEIOULNSTR',
       	3:'BCMP',
       	4:'FHVWY',
       	5:'K',
-      	8:'JZ',
+      	8:'JX',
       	10:'QZ'}
 points_ru = {1:'АВЕИНОРСТ',
       	2:'ДКЛМПУ',
@@ -53,4 +53,3 @@ if isCyrillic(word):
 	print(sum([k for i in word for k, v in points_ru.items() if i in v]))
 else:
 	print(sum([k for i in word for k, v in points_en.items() if i in v]))
-
