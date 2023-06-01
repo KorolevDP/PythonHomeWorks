@@ -3,7 +3,6 @@
 import text
 import view
 import model
-
 my_pb = model.PhoneBook()
 
 def start():   
