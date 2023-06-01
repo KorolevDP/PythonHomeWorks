@@ -5,7 +5,7 @@ import view
 import model
 my_pb = model.PhoneBook()
 
-def start():   
+def start():
 
     while True:
         choice = view.main_menu()
@@ -58,7 +58,7 @@ def start():
             case 7:
 
                  key_word = view.input_search(text.input_del)
-                 result = model.search_contact(key_word)
+                 result = my_pb.search(key_word)
                  if result:
                     if len(result) != 1:
                         view.print_contacts(result, '')

@@ -3,11 +3,11 @@ class PhoneBook:
     def __init__(self, path: str = 'phones.txt'):
         self._phone_book: list[dict[str, str]] = []
         self._path = path
-        self.last_id = 0
+        self._last_id = 0
                  
 
     def open(self):        
-        with open(self.path_, 'r', encoding = 'UTF-8') as file:
+        with open(self._path, 'r', encoding = 'UTF-8') as file:
             data = file.readlines()
         for contact in data:
             contact = contact.strip().split(';')
@@ -31,7 +31,7 @@ class PhoneBook:
         self._phone_book.append(new)
         return new.get('name')
 
-    def search_contact(self, word: str) -> list[dict[str, str]]:
+    def search(self, word: str) -> list[dict[str, str]]:
         result: list[dict[str, str]] = []
         for contact in self._phone_book:
             for field in contact.values():
@@ -40,7 +40,7 @@ class PhoneBook:
                     break
         return result
 
-    def change(self, new: dict, index: int) -> str:
+    def change(self, new: dict, index: int | str) -> str:
         for contact in self._phone_book:
             if index == contact.get('id'):            
                 contact['name'] = new.get('name', contact.get('name'))
