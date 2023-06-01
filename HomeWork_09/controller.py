@@ -4,8 +4,7 @@ import view
 import model
 import text
 
-def start():
-    while True:
+while True:
         choice = view.main_menu()
 
         match choice:

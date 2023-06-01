@@ -49,11 +49,13 @@ def change_contact(new: dict, index: int) -> str:
             contact['comment'] = new.get('comment', contact.get('comment'))
             return contact.get('name')
 
-def delete_contact( index: int) -> list[dict[str, str]]:
+def delete_contact( new: dict, index: int) -> str:
     global phone_book    
-
-    del phone_book[index]
-    return phone_book[index]
+    for contact in phone_book:
+        if index == contact.get('id'):
+            phone_book.pop(contact)
+            return contact.get('name')
+   
 
    
  #def add_contact(new: dict[str, str]) -> str:
