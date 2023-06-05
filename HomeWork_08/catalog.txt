@@ -1,4 +1,0 @@
-Ivan Ivanov; 89173335690; worker
-Petr Petrov; 89065557345; driver
-Olga Pavlova; 8917779045; programmer
-Irina Semenova; 89179997811; director
