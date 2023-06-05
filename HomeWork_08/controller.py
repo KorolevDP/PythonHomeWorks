@@ -4,7 +4,8 @@ import view
 import model
 import text
 
-while True:
+def start():
+    while True:
         choice = view.main_menu()
 
         match choice:
@@ -54,19 +55,19 @@ while True:
 
             case 7:
 
-                 key_word = view.input_search(text.input_del)
+                 key_word = view.input_search(text.input_delete)
                  result = model.search_contact(key_word)
                  if result:
-                    if len(result) != 1:
-                        view.print_contacts(result, '')
-                        current_id = view.input_search(text.input_index)
-                    else:
-                        current_id = result[0].get('id')
-                    view.print_contacts(result, '')                    
-                    model.delete_contact(current_id)
-                    #view.print_message(text.delete_succsessful(name))
+                        if len(result) != 1:
+                            view.print_contacts(result, '')
+                            current_id = view.input_search(text.input_index)
+                        else:
+                            current_id = result[0].get('id')
+                        view.print_contacts(result, '')                        
+                        name = model.delete_contact(current_id)                    
+                        view.print_message(text.delete_succsessful(name))
                  else:
-                     view.print_message(text.empty_search(key_word))                
-
+                    view.print_message(text.empty_search(key_word))
+                
             case 8:
                 break

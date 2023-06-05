@@ -25,7 +25,7 @@ new_contact = {'name': 'Введите имя: ',
                'comment': 'Введите комментарий: '}
 
 def new_contact_successfull(name: str):
-    return f'Контакт < {name} > успешно добавлен'
+    return f'Контакт {name} успешно добавлен'
 
 input_search = "Введите значение атрибута для поиска: "
 
@@ -38,11 +38,9 @@ input_index = "Введите индекс контакта: "
 change_contact = 'Введите новые данные или оставьте поле пустым, чтобы не менять: '
 
 def change_succsessful(name: str) -> str:
-    return f'Контакт < {name} > успешно изменен'
+    return f'Контакт {name}успешно изменен'
 
-
-input_del = "Какой контакт нужно удалить?: "
+input_delete = "Какой контакт будем удалять: "
 
 def delete_succsessful(name: str) -> str:
-    return f'Контакт  < {name} >  успешно удален'
-
+    return f'Контакт {name} успешно удален'
