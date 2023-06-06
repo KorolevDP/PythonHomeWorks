@@ -1,7 +1,4 @@
-1;        Ivan Ivanov;         89173335690;         worker
-2;        Petr Petrov;         89065557345;         driver
-3;      Irina Pavlova;       9-000-009;    senior programmer
-4;        Irina Semenova;         89179997811;         director
-5;        Dmitry Korolev;         89008886677;         Boss
-6;        Oksana Kov;  999-00-00;  girl
-Gena; 9987; Skull; 7
+1;          Ivan Ivanov;           89173335690;           worker
+2;          Petr Petrov;           89065557345;           driver
+3;        Irina Pavlova;         9-000-009;      senior programmer
+4;          Irina Semenova;           89179997811; dir
